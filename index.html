@@ -20,5 +20,16 @@
         </form>
     </main>
     
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", aoEnviar);
+
+        function aoEnviar(evento)
+        {
+            evento.preventDefault();
+            console.log("form");
+        }
+
+    </script>
 </body>
 </html>
