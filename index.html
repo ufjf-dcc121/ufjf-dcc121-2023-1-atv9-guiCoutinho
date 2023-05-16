@@ -14,10 +14,11 @@
         <form action="">
             <input type="text"  name="nome"/>
             <input type="text"  name="sobrenome"/>
-            <input type="text"  name="idade"/>
+            <input type="number"  name="idade"/>
             <input type="submit" />
             <input type="reset" />
         </form>
+        <p><span id="output"></span></p>
     </main>
     
     <script>
@@ -33,6 +34,11 @@
             const idade = Number(form.idade.value);
             const nomeCompleto = `${nome} ${sobrenome}, ${idade} anos`;
             console.log(nomeCompleto);
+            const output = document.getElementById("output");
+            output.innerText = `Olá ${nomeCompleto}!`;
+
+            form.reset();
+            form.nome.focus();
         }
 
     </script>
