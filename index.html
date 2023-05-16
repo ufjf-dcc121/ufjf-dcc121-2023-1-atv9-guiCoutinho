@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +28,11 @@
         {
             evento.preventDefault();
             console.log("form");
+            const nome = form.nome.value;
+            const sobrenome = form.sobrenome.value;
+            const idade = Number(form.idade.value);
+            const nomeCompleto = `${nome} ${sobrenome}, ${idade} anos`;
+            console.log(nomeCompleto);
         }
 
     </script>
