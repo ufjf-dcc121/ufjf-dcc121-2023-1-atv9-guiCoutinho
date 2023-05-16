@@ -19,10 +19,15 @@
             <input type="reset" />
         </form>
         <p><span id="output"></span></p>
+        <h2>Visitas passadas:</h2>
+        <ol>
+
+        </ol>
     </main>
     
     <script>
         const form = document.querySelector("form");
+        const ol = document.querySelector("ol")
         form.addEventListener("submit", aoEnviar);
 
         function aoEnviar(evento)
@@ -39,6 +44,11 @@
 
             form.reset();
             form.nome.focus();
+
+            const li = document.createElement('li');
+            li.textContent = nomeCompleto;
+            console.log(li);
+            ol.appendChild(li);
         }
 
     </script>
